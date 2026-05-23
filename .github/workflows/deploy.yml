@@ -32,10 +32,10 @@ jobs:
       - run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /DoctorWho-ODI-Demo
-          # Set this as a repo secret named ASK_ENDPOINT after deploying
-          # the Cloudflare Worker in whoniverse-app/worker/ — the value
-          # is the worker's public URL (e.g. https://whoniverse-archivist.<sub>.workers.dev)
-          NEXT_PUBLIC_ASK_ENDPOINT: ${{ secrets.ASK_ENDPOINT }}
+          # Cloudflare Worker URL — the URL itself isn't sensitive (it's
+          # visible in the browser's network tab). The ANTHROPIC_API_KEY
+          # is held as a wrangler secret inside the worker, not here.
+          NEXT_PUBLIC_ASK_ENDPOINT: https://whoniverse-archivist.jasonchletsos.workers.dev
       - name: Publish to gh-pages
         run: |
           cd "$GITHUB_WORKSPACE"
