@@ -2,7 +2,8 @@ import { doctors } from "@/lib/doctors";
 import { episodes } from "@/lib/episodes";
 import { companions } from "@/lib/companions";
 import EpisodeCard from "@/components/EpisodeCard";
-import { doctorSlug } from "@/components/slugs";
+import { doctorSlug, companionSlug } from "@/components/slugs";
+import { imageFor } from "@/lib/images";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
@@ -21,15 +22,30 @@ export default function DoctorPage({ params }: { params: { slug: string } }) {
 
   const eps = episodes.filter((e) => e.doctor === d.number).sort((a, b) => a.year - b.year);
   const comps = companions.filter((c) => c.doctors.includes(d.number));
+  const img = imageFor(`doctor:${d.number}`);
 
   return (
     <main className="px-5 py-12 sm:px-6 sm:py-16 md:px-16 md:py-20">
       <div className="mx-auto max-w-5xl">
-        <p className="type text-[11px] uppercase tracking-[0.4em] text-gallifrey mb-3">Incarnation {d.number}</p>
-        <h1 className="serif text-4xl sm:text-5xl text-paper">
-          <span className="regen-underline">{d.actor}</span>
-        </h1>
-        <p className="type text-[11px] uppercase tracking-[0.3em] text-bone/60 mt-3">{d.era}</p>
+        <div className={`${img ? "grid grid-cols-1 sm:grid-cols-[14rem_1fr] gap-6 sm:gap-8 items-start" : ""}`}>
+          {img && (
+            <div className="border border-gallifrey/40 bg-panel/40 overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={img.url}
+                alt={d.actor}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          )}
+          <div>
+            <p className="type text-[11px] uppercase tracking-[0.4em] text-gallifrey mb-3">Incarnation {d.number}</p>
+            <h1 className="serif text-4xl sm:text-5xl text-paper">
+              <span className="regen-underline">{d.actor}</span>
+            </h1>
+            <p className="type text-[11px] uppercase tracking-[0.3em] text-bone/60 mt-3">{d.era}</p>
+          </div>
+        </div>
 
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5">
           <div className="border border-tardisLt/30 bg-panel/40 p-4">

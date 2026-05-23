@@ -1,5 +1,6 @@
 import { monsters } from "@/lib/monsters";
 import { monsterSlug } from "@/components/slugs";
+import { imageFor } from "@/lib/images";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -23,10 +24,24 @@ export default function MonstersPage() {
         </p>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {sorted.map((m) => (
-            <article key={monsterSlug(m.name)} className={`relative overflow-hidden border ${m.iconic ? "border-crimson/45" : "border-tardisLt/30"} bg-panel/40 p-5`}>
+          {sorted.map((m) => {
+            const img = imageFor(`monster:${m.name}`);
+            return (
+            <article key={monsterSlug(m.name)} className={`relative overflow-hidden border ${m.iconic ? "border-crimson/45" : "border-tardisLt/30"} bg-panel/40`}>
               <div className="absolute inset-0 roundel-grid opacity-15 pointer-events-none" aria-hidden="true" />
-              <div className="relative">
+              {img && (
+                <div className="relative aspect-[16/8] w-full overflow-hidden border-b border-gallifrey/25">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={img.url}
+                    alt={m.name}
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-panel/95 via-panel/30 to-transparent" aria-hidden="true" />
+                </div>
+              )}
+              <div className="relative p-5">
                 <div className="flex items-baseline justify-between gap-3">
                   <p className="type text-[10px] uppercase tracking-[0.3em] text-gallifrey/80">{m.category}</p>
                   <p className="type text-[10px] text-bone/60">{m.appearances}+ stories</p>
@@ -54,7 +69,8 @@ export default function MonstersPage() {
                 )}
               </div>
             </article>
-          ))}
+            );
+          })}
         </div>
 
         <p className="mt-16 text-xs type uppercase tracking-[0.25em] text-bone/50">

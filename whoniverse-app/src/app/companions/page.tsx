@@ -1,5 +1,6 @@
 import { companions } from "@/lib/companions";
 import { companionSlug } from "@/components/slugs";
+import { imageFor } from "@/lib/images";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,30 +21,46 @@ export default function CompanionsPage() {
         </p>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {sorted.map((c) => (
-            <article key={companionSlug(c.name)} className={`relative overflow-hidden border ${c.iconic ? "border-gallifrey/40" : "border-tardisLt/30"} bg-panel/40 p-5`}>
-              <div className="absolute inset-0 roundel-grid opacity-15 pointer-events-none" aria-hidden="true" />
-              <div className="relative">
-                <div className="flex items-baseline justify-between gap-3">
-                  <p className="type text-[10px] uppercase tracking-[0.3em] text-gallifrey/80">{c.era}</p>
-                  <p className="type text-[10px] text-bone/65">Doctor {c.doctors.join(", ")}</p>
+          {sorted.map((c) => {
+            const img = imageFor(`companion:${c.name}`);
+            return (
+              <article key={companionSlug(c.name)} className={`relative overflow-hidden border ${c.iconic ? "border-gallifrey/40" : "border-tardisLt/30"} bg-panel/40`}>
+                <div className="absolute inset-0 roundel-grid opacity-15 pointer-events-none" aria-hidden="true" />
+                <div className="relative flex">
+                  {img && (
+                    <div className="flex-none w-24 sm:w-28 self-stretch overflow-hidden border-r border-gallifrey/20">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={img.url}
+                        alt={c.actor}
+                        loading="lazy"
+                        className="w-full h-full object-cover object-top"
+                      />
+                    </div>
+                  )}
+                  <div className="flex-1 p-5">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <p className="type text-[10px] uppercase tracking-[0.3em] text-gallifrey/80">{c.era}</p>
+                      <p className="type text-[10px] text-bone/65">Doctor {c.doctors.join(", ")}</p>
+                    </div>
+                    <h3 className="serif text-xl text-paper mt-1 leading-tight">
+                      {c.name}{c.iconic && <span className="ml-2 align-middle inline-block"><span className="pill pill--gold">Iconic</span></span>}
+                    </h3>
+                    <p className="type text-[10px] uppercase tracking-[0.25em] text-bone/55 mt-0.5">{c.actor}</p>
+                    <p className="text-sm text-bone/80 mt-3 leading-snug">
+                      <span className="text-signal/90 text-[11px] uppercase tracking-[0.2em] type mr-1">Origin.</span>
+                      {c.origin}
+                    </p>
+                    <p className="text-sm text-bone/80 mt-2 leading-snug">
+                      <span className="text-crimson text-[11px] uppercase tracking-[0.2em] type mr-1">Fate.</span>
+                      {c.fate}
+                    </p>
+                    <p className="text-sm text-bone/75 mt-3 leading-snug italic">{c.blurb}</p>
+                  </div>
                 </div>
-                <h3 className="serif text-xl text-paper mt-1 leading-tight">
-                  {c.name}{c.iconic && <span className="ml-2 align-middle inline-block"><span className="pill pill--gold">Iconic</span></span>}
-                </h3>
-                <p className="type text-[10px] uppercase tracking-[0.25em] text-bone/55 mt-0.5">{c.actor}</p>
-                <p className="text-sm text-bone/80 mt-3 leading-snug">
-                  <span className="text-signal/90 text-[11px] uppercase tracking-[0.2em] type mr-1">Origin.</span>
-                  {c.origin}
-                </p>
-                <p className="text-sm text-bone/80 mt-2 leading-snug">
-                  <span className="text-crimson text-[11px] uppercase tracking-[0.2em] type mr-1">Fate.</span>
-                  {c.fate}
-                </p>
-                <p className="text-sm text-bone/75 mt-3 leading-snug italic">{c.blurb}</p>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
 
         <p className="mt-16 text-xs type uppercase tracking-[0.25em] text-bone/50">

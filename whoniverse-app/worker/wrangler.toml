@@ -1,0 +1,15 @@
+name = "whoniverse-archivist"
+main = "index.js"
+compatibility_date = "2026-05-22"
+
+# Bake the context JSON into the worker bundle.
+rules = [
+  { type = "Text", globs = ["whoniverse-context.json"], fallthrough = true },
+]
+
+# The Anthropic key is injected as a secret:
+#   wrangler secret put ANTHROPIC_API_KEY
+#
+# After `wrangler deploy`, the worker URL will look like:
+#   https://whoniverse-archivist.<your-subdomain>.workers.dev
+# Set that as NEXT_PUBLIC_ASK_ENDPOINT in the GH Actions workflow.
