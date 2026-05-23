@@ -10,12 +10,13 @@ const NAV = [
   { num: "04", href: "/monsters",     label: "Monsters" },
   { num: "05", href: "/episodes",     label: "Episodes" },
   { num: "06", href: "/tardis",       label: "TARDIS" },
-  { num: "07", href: "/connections",  label: "Connections" },
-  { num: "08", href: "/related",      label: "Related" },
-  { num: "09", href: "/timeline",     label: "Timeline" },
-  { num: "10", href: "/submit",       label: "Submit" },
-  { num: "11", href: "/architecture", label: "ODI" },
-  { num: "12", href: "/pipeline",     label: "Pipeline" },
+  { num: "07", href: "/quiz",         label: "Which Doctor?" },
+  { num: "08", href: "/connections",  label: "Connections" },
+  { num: "09", href: "/related",      label: "Related" },
+  { num: "10", href: "/timeline",     label: "Timeline" },
+  { num: "11", href: "/submit",       label: "Submit" },
+  { num: "12", href: "/architecture", label: "ODI" },
+  { num: "13", href: "/pipeline",     label: "Pipeline" },
 ];
 
 export default function TopNav() {

@@ -17,6 +17,7 @@ the home page below the hero and in the footer of every page.
 | Wikidata | Fivetran HTTP source (SPARQL endpoint) | Doctors, companions, monsters, episodes — structured triples with stable QIDs | `bronze_wikidata` |
 | TARDIS Wiki (Fandom) | Fivetran HTTP source | Free-text descriptions, era detail, in-universe trivia | `bronze_tardis_wiki` |
 | TMDB | Fivetran TMDB / HTTP source | Cast & crew, broadcast dates, poster paths | `bronze_tmdb` |
+| IMDb | Fivetran HTTP source (non-commercial datasets) | Ratings, vote counts, episode-tree linkage. Anchored on `tt0056751` (classic), `tt0436992` (modern) and `tt2326758` (*An Adventure in Space and Time*) | `bronze_imdb` |
 
 The /architecture page walks visitors through this pipeline with the
 same lineage diagram the industry demos use.

@@ -28,6 +28,7 @@ export default function Hero() {
           <Link href="/companions"   className="px-5 py-2.5 type uppercase tracking-[0.2em] text-xs border border-paper/25 text-bone hover:text-paper hover:border-gallifrey/60 transition">Companions</Link>
           <Link href="/monsters"     className="px-5 py-2.5 type uppercase tracking-[0.2em] text-xs border border-paper/25 text-bone hover:text-paper hover:border-gallifrey/60 transition">Monsters</Link>
           <Link href="/episodes"     className="px-5 py-2.5 type uppercase tracking-[0.2em] text-xs border border-paper/25 text-bone hover:text-paper hover:border-gallifrey/60 transition">Episodes</Link>
+          <Link href="/quiz"         className="px-5 py-2.5 type uppercase tracking-[0.2em] text-xs bg-gallifrey/15 border border-gallifrey/60 text-gallifrey hover:bg-gallifrey/30 transition">Which Doctor are you?</Link>
           <Link href="/timeline"     className="px-5 py-2.5 type uppercase tracking-[0.2em] text-xs border border-paper/25 text-bone hover:text-paper hover:border-gallifrey/60 transition">Timeline</Link>
           <Link href="/architecture" className="px-5 py-2.5 type uppercase tracking-[0.2em] text-xs border border-paper/25 text-bone hover:text-paper hover:border-gallifrey/60 transition">ODI Architecture</Link>
         </div>

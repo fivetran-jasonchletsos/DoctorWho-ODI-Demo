@@ -1,6 +1,6 @@
-# Fivetran connectors — TARDIS Index File (3 sources)
+# Fivetran connectors — TARDIS Index File (4 sources)
 
-Three managed Fivetran connectors feed the Whoniverse. All three land
+Four managed Fivetran connectors feed the Whoniverse. All four land
 into the same Iceberg lake in S3, mirrored into Snowflake. dbt + Cortex
 sit on top of the gold layer.
 
@@ -11,6 +11,12 @@ sit on top of the gold layer.
 | Wikidata | SPARQL endpoint at `https://query.wikidata.org/sparql` (Fivetran HTTP source) | `bronze_wikidata` | Weekly | `doctors`, `companions`, `monsters`, `episodes`, `appearances` |
 | TARDIS Wiki | `https://tardis.fandom.com/api.php` (Fandom MediaWiki, HTTP source via Fivetran Connector SDK) | `bronze_tardis_wiki` | Daily | `doctor_pages`, `monster_pages`, `episode_pages` |
 | TMDB | `https://api.themoviedb.org/3/` (Fivetran TMDB / HTTP source) | `bronze_tmdb` | Daily | `tv_seasons`, `tv_episodes`, `people_credits` |
+| IMDb | IMDb non-commercial datasets at `https://datasets.imdbws.com/` (Fivetran HTTP source) | `bronze_imdb` | Weekly | `title_basics`, `title_episode`, `title_ratings`, `name_basics`, `title_principals` |
+
+Anchor IMDb title IDs:
+- `tt0056751` — Doctor Who (1963–1989, the classic run)
+- `tt0436992` — Doctor Who (2005–present, the modern run)
+- `tt2326758` — An Adventure in Space and Time (2013, the docudrama)
 
 ## Wikidata setup
 
@@ -85,7 +91,45 @@ Tables landed:        tv_seasons, tv_episodes, people_credits
 Schema inference:     enabled
 ```
 
-## Why three connectors and not one
+## IMDb setup
+
+IMDb publishes seven gzipped TSVs daily under their non-commercial
+dataset programme. The connector lands all seven into the bronze
+schema; we filter to the Doctor Who title tree downstream.
+
+Files we pull:
+```
+title.basics.tsv.gz      title-level metadata (tconst, primaryTitle, startYear, genres)
+title.episode.tsv.gz     parentTconst / seasonNumber / episodeNumber linkage
+title.ratings.tsv.gz     averageRating / numVotes per tconst
+name.basics.tsv.gz       people (actors, directors, writers)
+title.principals.tsv.gz  cast & crew per tconst
+```
+
+Connector config:
+```
+Connector type:       HTTP source (Fivetran Connector SDK custom)
+URL pattern:          https://datasets.imdbws.com/{file}.tsv.gz
+Auth:                 none (CC-BY-NC; respect IMDb non-commercial terms)
+Schema:               bronze_imdb
+Tables landed:        title_basics, title_episode, title_ratings,
+                      name_basics, title_principals
+Sync frequency:       weekly (IMDb refreshes daily but we don't need that)
+```
+
+Downstream silver filter:
+```sql
+-- Whoniverse title tree: classic series + modern series + the docudrama
+where tconst in ('tt0056751', 'tt0436992', 'tt2326758')
+   or parent_tconst in ('tt0056751', 'tt0436992')
+```
+
+That single `where` clause produces every classic serial, every modern
+episode and every special that has ever aired — plus *An Adventure in
+Space and Time* (tt2326758), the 2013 BBC docudrama about the show's
+1963 birth, which lives in this archive as a meta-canon entry.
+
+## Why four connectors and not one
 
 Each source answers a different question:
 - **Wikidata** has *structured triples with stable QIDs* for every
@@ -96,6 +140,9 @@ Each source answers a different question:
   Wikidata doesn't bother with.
 - **TMDB** has the *production metadata* &mdash; air dates, runtimes,
   cast & crew &mdash; that the wikis treat as an afterthought.
+- **IMDb** has the *ratings, vote counts and episode-tree linkage*.
+  The episode/parent-title structure is the cleanest way to materialise
+  every modern-era episode as a child of `tt0436992` without scraping.
 
 This is the ODI thesis in concrete form: each source is best at what
 it's best at, none of them is forced into the others' shape.
