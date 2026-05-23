@@ -1,0 +1,380 @@
+{
+  "doctor:1": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/William_Hartnell%2C_1946_%28halftone_filtered%29.jpg/330px-William_Hartnell%2C_1946_%28halftone_filtered%29.jpg",
+    "width": 330,
+    "height": 458,
+    "page": "https://en.wikipedia.org/wiki/William_Hartnell",
+    "credit": "English actor (1908–1975)"
+  },
+  "doctor:2": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/TroughtonCropandColourCorrect.jpg/330px-TroughtonCropandColourCorrect.jpg",
+    "width": 330,
+    "height": 352,
+    "page": "https://en.wikipedia.org/wiki/Patrick_Troughton",
+    "credit": "English actor (1920–1987)"
+  },
+  "doctor:3": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Jon_Pertwee_%28filtered%29.jpg/330px-Jon_Pertwee_%28filtered%29.jpg",
+    "width": 330,
+    "height": 302,
+    "page": "https://en.wikipedia.org/wiki/Jon_Pertwee",
+    "credit": "English actor (1919–1996)"
+  },
+  "doctor:4": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/LonelyEnbyx_with_Tom_Baker_%28cropped_and_edited%29.jpg/330px-LonelyEnbyx_with_Tom_Baker_%28cropped_and_edited%29.jpg",
+    "width": 330,
+    "height": 440,
+    "page": "https://en.wikipedia.org/wiki/Tom_Baker",
+    "credit": "English actor (born 1934)"
+  },
+  "doctor:5": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Peter_Davison_2016.jpg/330px-Peter_Davison_2016.jpg",
+    "width": 330,
+    "height": 473,
+    "page": "https://en.wikipedia.org/wiki/Peter_Davison",
+    "credit": "English actor (born 1951)"
+  },
+  "doctor:6": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Colin_Baker_%28cropped%29.jpg/330px-Colin_Baker_%28cropped%29.jpg",
+    "width": 330,
+    "height": 440,
+    "page": "https://en.wikipedia.org/wiki/Colin_Baker",
+    "credit": "English actor (born 1943)"
+  },
+  "doctor:7": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Sylvester_McCoy_in_2018.jpg/330px-Sylvester_McCoy_in_2018.jpg",
+    "width": 330,
+    "height": 495,
+    "page": "https://en.wikipedia.org/wiki/Sylvester_McCoy",
+    "credit": "Scottish actor (born 1943)"
+  },
+  "doctor:8": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Paul_McGann_2015.jpg/330px-Paul_McGann_2015.jpg",
+    "width": 330,
+    "height": 487,
+    "page": "https://en.wikipedia.org/wiki/Paul_McGann",
+    "credit": "English actor (born 1959)"
+  },
+  "doctor:War": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/John_Hurt_at_the_2009_Tribeca_Film_Festival.jpg/330px-John_Hurt_at_the_2009_Tribeca_Film_Festival.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 330,
+    "height": 413,
+    "page": "https://en.wikipedia.org/wiki/John_Hurt",
+    "credit": "English actor (1940–2017)"
+  },
+  "doctor:9": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Christopher_Eccleston_Photo_Op_GalaxyCon_Louisville_2019.jpg/330px-Christopher_Eccleston_Photo_Op_GalaxyCon_Louisville_2019.jpg",
+    "width": 330,
+    "height": 489,
+    "page": "https://en.wikipedia.org/wiki/Christopher_Eccleston",
+    "credit": "English actor (born 1964)"
+  },
+  "doctor:10": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/David_Tennant_-_Los_Angeles_Comic_Con_2025.jpg/330px-David_Tennant_-_Los_Angeles_Comic_Con_2025.jpg",
+    "width": 330,
+    "height": 413,
+    "page": "https://en.wikipedia.org/wiki/David_Tennant",
+    "credit": "Scottish actor (born 1971)"
+  },
+  "doctor:Meta-Crisis": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/David_Tennant_-_Los_Angeles_Comic_Con_2025.jpg/330px-David_Tennant_-_Los_Angeles_Comic_Con_2025.jpg",
+    "width": 330,
+    "height": 413,
+    "page": "https://en.wikipedia.org/wiki/David_Tennant",
+    "credit": "Scottish actor (born 1971)"
+  },
+  "doctor:11": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Matt_Smith_at_Los_Angeles_Comic_Con_2023-02.jpg/330px-Matt_Smith_at_Los_Angeles_Comic_Con_2023-02.jpg",
+    "width": 330,
+    "height": 413,
+    "page": "https://en.wikipedia.org/wiki/Matt_Smith",
+    "credit": "English actor (born 1982)"
+  },
+  "doctor:12": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Peter_Capaldi_%2848636861851%29.jpg/330px-Peter_Capaldi_%2848636861851%29.jpg",
+    "width": 330,
+    "height": 445,
+    "page": "https://en.wikipedia.org/wiki/Peter_Capaldi",
+    "credit": "Scottish actor and director (born 1958)"
+  },
+  "doctor:13": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Jodie_Whittaker_%2852553050691%29.jpg/330px-Jodie_Whittaker_%2852553050691%29.jpg",
+    "width": 330,
+    "height": 475,
+    "page": "https://en.wikipedia.org/wiki/Jodie_Whittaker",
+    "credit": "English actress (born 1982)"
+  },
+  "doctor:Fugitive": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Jo_Martin.jpg/330px-Jo_Martin.jpg",
+    "width": 330,
+    "height": 263,
+    "page": "https://en.wikipedia.org/wiki/Jo_Martin",
+    "credit": "English actress and writer (born 1969)"
+  },
+  "doctor:14": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/David_Tennant_-_Los_Angeles_Comic_Con_2025.jpg/330px-David_Tennant_-_Los_Angeles_Comic_Con_2025.jpg",
+    "width": 330,
+    "height": 413,
+    "page": "https://en.wikipedia.org/wiki/David_Tennant",
+    "credit": "Scottish actor (born 1971)"
+  },
+  "doctor:15": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Ncuti_Gatwa-65764.jpg/330px-Ncuti_Gatwa-65764.jpg",
+    "width": 330,
+    "height": 440,
+    "page": "https://en.wikipedia.org/wiki/Ncuti_Gatwa",
+    "credit": "Rwandan and Scottish actor (born 1992)"
+  },
+  "doctor:Curator": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/LonelyEnbyx_with_Tom_Baker_%28cropped_and_edited%29.jpg/330px-LonelyEnbyx_with_Tom_Baker_%28cropped_and_edited%29.jpg",
+    "width": 330,
+    "height": 440,
+    "page": "https://en.wikipedia.org/wiki/Tom_Baker",
+    "credit": "English actor (born 1934)"
+  },
+  "companion:Susan Foreman": {
+    "url": "https://upload.wikimedia.org/wikipedia/en/2/20/Susan_Foreman.jpg",
+    "width": 269,
+    "height": 372,
+    "page": "https://en.wikipedia.org/wiki/Susan_Foreman",
+    "credit": "Fictional character in Doctor Who"
+  },
+  "companion:Jamie McCrimmon": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Frazer_Hines.jpg/330px-Frazer_Hines.jpg",
+    "width": 330,
+    "height": 426,
+    "page": "https://en.wikipedia.org/wiki/Frazer_Hines",
+    "credit": "English actor (born 1944)"
+  },
+  "companion:Sarah Jane Smith": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Elisabeth_Sladen_%28cropped_to_shoulders%29.jpg/330px-Elisabeth_Sladen_%28cropped_to_shoulders%29.jpg",
+    "width": 330,
+    "height": 301,
+    "page": "https://en.wikipedia.org/wiki/Elisabeth_Sladen",
+    "credit": "English actress (1946–2011)"
+  },
+  "companion:Romana II": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Lalla_Ward_2014.jpg/330px-Lalla_Ward_2014.jpg",
+    "width": 330,
+    "height": 340,
+    "page": "https://en.wikipedia.org/wiki/Lalla_Ward",
+    "credit": "English actress, author (born 1951)"
+  },
+  "companion:K-9": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Doctor_Who_Experience_%288105526993%29.jpg/330px-Doctor_Who_Experience_%288105526993%29.jpg",
+    "width": 330,
+    "height": 257,
+    "page": "https://en.wikipedia.org/wiki/K9_(Doctor_Who)",
+    "credit": "Fictional character from Doctor Who and The Sarah Jane Adventures"
+  },
+  "companion:Tegan Jovanka": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Janet_Fielding%2C_Baltimore_1987_2.jpg/330px-Janet_Fielding%2C_Baltimore_1987_2.jpg",
+    "width": 330,
+    "height": 482,
+    "page": "https://en.wikipedia.org/wiki/Janet_Fielding",
+    "credit": "Australian actress (born 1953)"
+  },
+  "companion:Ace": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Sophie_Aldred%2C_%28Re%29Generation_2%2C_2016.jpg/330px-Sophie_Aldred%2C_%28Re%29Generation_2%2C_2016.jpg",
+    "width": 330,
+    "height": 493,
+    "page": "https://en.wikipedia.org/wiki/Sophie_Aldred",
+    "credit": "English actress, author (born 1962)"
+  },
+  "companion:Rose Tyler": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Billie_Piper_-_Los_Angeles_Comic_Con_2025.jpg/330px-Billie_Piper_-_Los_Angeles_Comic_Con_2025.jpg",
+    "width": 330,
+    "height": 413,
+    "page": "https://en.wikipedia.org/wiki/Billie_Piper",
+    "credit": "English actress and former singer (born 1982)"
+  },
+  "companion:Captain Jack Harkness": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/John_Barrowman_%2854673201677%29_%28cropped%29.jpg/330px-John_Barrowman_%2854673201677%29_%28cropped%29.jpg",
+    "width": 330,
+    "height": 440,
+    "page": "https://en.wikipedia.org/wiki/John_Barrowman",
+    "credit": "Scottish-American actor, author, and singer (born 1967)"
+  },
+  "companion:Martha Jones": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Freema_Agyeman_%2848460099371%29_%28cropped%29.jpg/330px-Freema_Agyeman_%2848460099371%29_%28cropped%29.jpg",
+    "width": 330,
+    "height": 419,
+    "page": "https://en.wikipedia.org/wiki/Freema_Agyeman",
+    "credit": "British actress (born 1979)"
+  },
+  "companion:Donna Noble": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Catherine_Tate_-_Gallifrey_One_2025.jpg/330px-Catherine_Tate_-_Gallifrey_One_2025.jpg",
+    "width": 330,
+    "height": 413,
+    "page": "https://en.wikipedia.org/wiki/Catherine_Tate",
+    "credit": "British actress, comedian and writer (born 1969)"
+  },
+  "companion:Wilfred Mott": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Bernard_Cribbins_in_2015.jpg/330px-Bernard_Cribbins_in_2015.jpg",
+    "width": 330,
+    "height": 462,
+    "page": "https://en.wikipedia.org/wiki/Bernard_Cribbins",
+    "credit": "British actor (1928–2022)"
+  },
+  "companion:Amy Pond": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Karen_Gillan_Photo_Op_GalaxyCon_Des_Moines_2025_%28cropped%29.jpg/330px-Karen_Gillan_Photo_Op_GalaxyCon_Des_Moines_2025_%28cropped%29.jpg",
+    "width": 330,
+    "height": 440,
+    "page": "https://en.wikipedia.org/wiki/Karen_Gillan",
+    "credit": "Scottish actress and filmmaker (born 1987)"
+  },
+  "companion:Rory Williams": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Arthur_Darvill_Comiccon_Brussels_1_%28cropped%29.jpg/330px-Arthur_Darvill_Comiccon_Brussels_1_%28cropped%29.jpg",
+    "width": 330,
+    "height": 453,
+    "page": "https://en.wikipedia.org/wiki/Arthur_Darvill",
+    "credit": "English actor, composer, and musician (born 1982)"
+  },
+  "companion:River Song": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Alex_Kingston_Photo_Op_GalaxyCon_Minneapolis_2019.jpg/330px-Alex_Kingston_Photo_Op_GalaxyCon_Minneapolis_2019.jpg",
+    "width": 330,
+    "height": 399,
+    "page": "https://en.wikipedia.org/wiki/Alex_Kingston",
+    "credit": "English actress (born 1963)"
+  },
+  "companion:Clara Oswald": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Jenna_Coleman_at_Gallifrey_One_2025.jpg/330px-Jenna_Coleman_at_Gallifrey_One_2025.jpg",
+    "width": 330,
+    "height": 413,
+    "page": "https://en.wikipedia.org/wiki/Jenna_Coleman",
+    "credit": "English actress (born 1986)"
+  },
+  "companion:Bill Potts": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Pearl_Mackie_by_Gage_Skidmore.jpg/330px-Pearl_Mackie_by_Gage_Skidmore.jpg",
+    "width": 330,
+    "height": 438,
+    "page": "https://en.wikipedia.org/wiki/Pearl_Mackie",
+    "credit": "British actress (born 1987)"
+  },
+  "companion:Yasmin Khan": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Mandip_Gill_by_Gage_Skidmore.jpg/330px-Mandip_Gill_by_Gage_Skidmore.jpg",
+    "width": 330,
+    "height": 451,
+    "page": "https://en.wikipedia.org/wiki/Mandip_Gill",
+    "credit": "English actress (born 1988)"
+  },
+  "companion:Graham O'Brien": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/BradleyWalsh.JPG/330px-BradleyWalsh.JPG",
+    "width": 330,
+    "height": 435,
+    "page": "https://en.wikipedia.org/wiki/Bradley_Walsh",
+    "credit": "English actor, singer and television presenter (born 1960)"
+  },
+  "companion:Ruby Sunday": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Millie_Gibson_2.png/330px-Millie_Gibson_2.png",
+    "width": 330,
+    "height": 442,
+    "page": "https://en.wikipedia.org/wiki/Millie_Gibson",
+    "credit": "English actress (born 2004)"
+  },
+  "companion:Kate Lethbridge-Stewart": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Jemma_Redgrave_at_Flux_con_Birmingham%2C_March_2026.jpg/330px-Jemma_Redgrave_at_Flux_con_Birmingham%2C_March_2026.jpg",
+    "width": 330,
+    "height": 585,
+    "page": "https://en.wikipedia.org/wiki/Jemma_Redgrave",
+    "credit": "British actress (born 1965)"
+  },
+  "companion:Brigadier Alistair Gordon Lethbridge-Stewart": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Nicholas_Courtney%2C_Invasion_2010_%28cropped%29.jpg/330px-Nicholas_Courtney%2C_Invasion_2010_%28cropped%29.jpg",
+    "width": 330,
+    "height": 420,
+    "page": "https://en.wikipedia.org/wiki/Nicholas_Courtney",
+    "credit": "British actor (1929–2011)"
+  },
+  "monster:Daleks": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Cardiff_Bay_-_Dalek_-_geograph.org.uk_-_5253753.jpg/330px-Cardiff_Bay_-_Dalek_-_geograph.org.uk_-_5253753.jpg",
+    "width": 330,
+    "height": 440,
+    "page": "https://en.wikipedia.org/wiki/Dalek",
+    "credit": "Fictional extraterrestrial race"
+  },
+  "monster:Davros": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Davros_%2810634476205%29.jpg/330px-Davros_%2810634476205%29.jpg",
+    "width": 330,
+    "height": 440,
+    "page": "https://en.wikipedia.org/wiki/Davros",
+    "credit": "Fictional character from Doctor Who"
+  },
+  "monster:Cybermen": {
+    "url": "https://upload.wikimedia.org/wikipedia/en/thumb/3/38/Cyberman_2020_redesign.jpg/330px-Cyberman_2020_redesign.jpg",
+    "width": 330,
+    "height": 244,
+    "page": "https://en.wikipedia.org/wiki/Cyberman",
+    "credit": "Fictional race of cyborgs from Doctor Who"
+  },
+  "monster:The Master / Missy": {
+    "url": "https://upload.wikimedia.org/wikipedia/en/e/e8/Versions_of_the_Master.png",
+    "width": 253,
+    "height": 394,
+    "page": "https://en.wikipedia.org/wiki/The_Master_(Doctor_Who)",
+    "credit": "Character in TV series Doctor Who"
+  },
+  "monster:Weeping Angels": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Weeping_Angel.jpg/330px-Weeping_Angel.jpg",
+    "width": 330,
+    "height": 575,
+    "page": "https://en.wikipedia.org/wiki/Weeping_Angel",
+    "credit": "Fictional villain in Doctor Who"
+  },
+  "monster:The Silence": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/The_Silence_%2811030194386%29_%28cropped%29.jpg/330px-The_Silence_%2811030194386%29_%28cropped%29.jpg",
+    "width": 330,
+    "height": 476,
+    "page": "https://en.wikipedia.org/wiki/Silent_(Doctor_Who)",
+    "credit": "Fictional religious order from Doctor Who"
+  },
+  "monster:Sontarans": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/280808-054_CPS_%283998769136%29.jpg/330px-280808-054_CPS_%283998769136%29.jpg",
+    "width": 330,
+    "height": 341,
+    "page": "https://en.wikipedia.org/wiki/Sontaran",
+    "credit": "Alien species from the television show Doctor Who"
+  },
+  "monster:Zygons": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Doctor_Who_Experience_%2830641638350%29.jpg/330px-Doctor_Who_Experience_%2830641638350%29.jpg",
+    "width": 330,
+    "height": 497,
+    "page": "https://en.wikipedia.org/wiki/Zygon",
+    "credit": "Fictional shape-shifting species from Doctor Who"
+  },
+  "monster:Ice Warriors": {
+    "url": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5d/Ice_Warriors.jpg/330px-Ice_Warriors.jpg",
+    "width": 330,
+    "height": 186,
+    "page": "https://en.wikipedia.org/wiki/Ice_Warrior",
+    "credit": "Fictional alien from Doctor Who"
+  },
+  "monster:Silurians": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Doctor_Who_50th_Celebration_%2811278505066%29.jpg/330px-Doctor_Who_50th_Celebration_%2811278505066%29.jpg",
+    "width": 330,
+    "height": 717,
+    "page": "https://en.wikipedia.org/wiki/Silurian_and_Sea_Devil",
+    "credit": "Fictional race from the television series Doctor Who"
+  },
+  "monster:The Ood": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Doctor_Who_Experience_%2813080748995%29.jpg/330px-Doctor_Who_Experience_%2813080748995%29.jpg",
+    "width": 330,
+    "height": 424,
+    "page": "https://en.wikipedia.org/wiki/Ood",
+    "credit": "Alien species from Doctor Who series"
+  },
+  "monster:Slitheen / Raxacoricofallapatorians": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Slitheen_%283151315454%29.jpg/330px-Slitheen_%283151315454%29.jpg",
+    "width": 330,
+    "height": 221,
+    "page": "https://en.wikipedia.org/wiki/Slitheen",
+    "credit": "Alien crime family in Doctor Who"
+  },
+  "monster:The Toymaker": {
+    "url": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Celestial_Toymaker.jpg/330px-Celestial_Toymaker.jpg",
+    "width": 330,
+    "height": 236,
+    "page": "https://en.wikipedia.org/wiki/The_Celestial_Toymaker",
+    "credit": "1966 Doctor Who serial"
+  }
+}
