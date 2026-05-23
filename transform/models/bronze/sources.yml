@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: bronze_wikidata
+    description: Raw landings from the Fivetran Wikidata SPARQL connector.
+    tables:
+      - name: doctors
+      - name: companions
+      - name: monsters
+      - name: episodes
+      - name: appearances
+
+  - name: bronze_tardis_wiki
+    description: Raw page extracts from the Fandom TARDIS Wiki connector.
+    tables:
+      - name: doctor_pages
+      - name: monster_pages
+      - name: episode_pages
+
+  - name: bronze_tmdb
+    description: Raw landings from the Fivetran TMDB connector.
+    tables:
+      - name: tv_seasons
+      - name: tv_episodes
+      - name: people_credits

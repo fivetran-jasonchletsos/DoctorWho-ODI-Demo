@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+*.log
+.env*
+.DS_Store
+.vscode/
+.idea/
+target/
+dbt_packages/
+logs/

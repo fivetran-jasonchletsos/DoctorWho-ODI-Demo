@@ -1,0 +1,304 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background: #05060d;
+  color: #ece5cf;
+  font-family: var(--font-crimson), Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+.serif {
+  font-family: var(--font-cinzel), Georgia, "Times New Roman", serif;
+  letter-spacing: 0.02em;
+}
+
+.font-mono,
+[class*="font-mono"] {
+  font-family: var(--font-jetbrains), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.type {
+  font-family: var(--font-orbitron), var(--font-jetbrains), monospace;
+  letter-spacing: 0.05em;
+}
+
+/* ────────────────────────────────────────────────────────────────────
+   Texture — Time Vortex. Star-field + faint Gallifreyan circle grain
+   ──────────────────────────────────────────────────────────────────── */
+
+.vortex-bg {
+  background-color: #05060d;
+  background-image:
+    /* Star-field noise */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.4  0 0 0 0 0.6  0 0 0 0 1  0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E"),
+    /* Faint circle-grid (Gallifreyan-ish dots) */
+    radial-gradient(rgba(212,160,23,0.05) 1px, transparent 1.5px),
+    radial-gradient(rgba(93,212,212,0.03) 1px, transparent 1px),
+    /* TARDIS-blue top wash + void bottom vignette */
+    radial-gradient(ellipse 130% 80% at 50% 0%, rgba(26,58,110,0.40) 0%, transparent 65%),
+    radial-gradient(ellipse 90% 70% at 50% 100%, rgba(5,6,13,0.85) 0%, transparent 70%);
+  background-size: 320px 320px, 14px 14px, 22px 22px, 100% 100%, 100% 100%;
+  background-position: 0 0, 0 0, 7px 11px, 0 0, 0 0;
+}
+
+/* Hero atmospheric layer — vortex swirl streaks */
+.hero-atmosphere {
+  position: relative;
+}
+.hero-atmosphere::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    /* Diagonal vortex streaks */
+    repeating-linear-gradient(
+      105deg,
+      transparent 0px,
+      transparent 60px,
+      rgba(93,212,212,0.04) 60px,
+      rgba(93,212,212,0.04) 61px,
+      transparent 62px,
+      transparent 130px,
+      rgba(212,160,23,0.03) 130px,
+      rgba(212,160,23,0.03) 131px
+    ),
+    /* Bottom TARDIS-blue glow */
+    radial-gradient(ellipse 100% 50% at 50% 100%, rgba(37,99,168,0.20) 0%, transparent 80%);
+  z-index: 0;
+}
+.hero-atmosphere > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Focus */
+:focus-visible {
+  outline: 2px solid rgba(212, 160, 23, 0.75);
+  outline-offset: 3px;
+}
+
+/* ────────────────────────────────────────────────────────────────────
+   Hero underline — regeneration energy variant
+   ──────────────────────────────────────────────────────────────────── */
+
+@keyframes regen-line {
+  0%   { transform: scaleX(0); opacity: 0; transform-origin: left; }
+  60%  { transform: scaleX(1); opacity: 1; transform-origin: left; }
+  100% { transform: scaleX(1); opacity: 1; }
+}
+
+@keyframes regen-glow {
+  0%, 100% { box-shadow: 0 0 6px rgba(255,185,69,0.45), 0 0 12px rgba(212,160,23,0.25); }
+  50%      { box-shadow: 0 0 12px rgba(255,185,69,0.85), 0 0 28px rgba(212,160,23,0.55); }
+}
+
+.regen-underline {
+  position: relative;
+  display: inline;
+}
+.regen-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #8a5a1f, #ffb945 50%, #d4a017);
+  animation: regen-line 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both,
+             regen-glow 3.6s ease-in-out 1.4s infinite;
+}
+
+/* TARDIS-blue underline variant for secondary headings */
+.tardis-underline {
+  position: relative;
+  display: inline;
+}
+.tardis-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #1a3a6e, #3a6db0 50%, #5dd4d4);
+}
+
+/* ────────────────────────────────────────────────────────────────────
+   Page-load stagger
+   ──────────────────────────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  animation: fadeUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.reveal-1 { animation-delay: 0.05s; }
+.reveal-2 { animation-delay: 0.15s; }
+.reveal-3 { animation-delay: 0.25s; }
+.reveal-4 { animation-delay: 0.38s; }
+
+/* ────────────────────────────────────────────────────────────────────
+   Card hover — TARDIS panel float
+   ──────────────────────────────────────────────────────────────────── */
+
+.cover-card {
+  transition:
+    transform 350ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .cover-card {
+  transform: translateY(-6px) rotate(-0.4deg) scale(1.03);
+  box-shadow:
+    0 6px 16px rgba(0,0,0,0.65),
+    0 22px 50px rgba(0,0,0,0.75),
+    0 0 0 1px rgba(212,160,23,0.35),
+    0 0 24px rgba(58,109,176,0.35);
+}
+
+/* Marquee for the live submissions ticker */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 200s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Section ornament — Gallifreyan parchment cross-rule */
+.section-ornament {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.section-ornament::before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(212,160,23,0.45), rgba(93,212,212,0.18));
+}
+.section-ornament::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to left, transparent, rgba(212,160,23,0.45), rgba(93,212,212,0.18));
+}
+
+/* Drop-cap for long-form prose */
+.drop-cap::first-letter {
+  font-family: var(--font-cinzel), Georgia, serif;
+  font-size: 4.2em;
+  line-height: 0.8;
+  float: left;
+  margin-right: 0.1em;
+  margin-top: 0.08em;
+  color: #d4a017;
+}
+
+/* Sticky meta-bar with TARDIS tint */
+.meta-bar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(12px) saturate(1.15);
+  -webkit-backdrop-filter: blur(12px) saturate(1.15);
+  background: rgba(10, 20, 40, 0.88);
+  border-bottom: 1px solid rgba(212,160,23,0.20);
+}
+
+/* Subtle TARDIS-light flicker on the brand mark */
+@keyframes flicker {
+  0%, 100%   { opacity: 1; }
+  47%        { opacity: 1; }
+  48%        { opacity: 0.7; }
+  49%        { opacity: 1; }
+  82%        { opacity: 1; }
+  83%        { opacity: 0.85; }
+  84%        { opacity: 1; }
+}
+.flicker {
+  animation: flicker 6s infinite;
+}
+
+/* TARDIS lamp pulse */
+@keyframes tardis-pulse {
+  0%, 100% { box-shadow: 0 0 6px rgba(255,255,255,0.4), 0 0 14px rgba(93,212,212,0.35); }
+  50%      { box-shadow: 0 0 14px rgba(255,255,255,0.85), 0 0 32px rgba(93,212,212,0.55); }
+}
+.pulse-lamp { animation: tardis-pulse 3.8s ease-in-out infinite; }
+
+/* Vortex caret for headings */
+.vortex-stop::before {
+  content: "◉";
+  display: inline-block;
+  color: #d4a017;
+  margin-right: 0.45em;
+  transform: translateY(-0.06em);
+  font-size: 0.7em;
+}
+
+/* TARDIS panel pill */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  font-family: var(--font-orbitron), monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: rgba(26, 58, 110, 0.45);
+  border: 1px solid rgba(58, 109, 176, 0.45);
+  color: #cfc7b1;
+}
+.pill--gold {
+  background: rgba(212, 160, 23, 0.12);
+  border-color: rgba(212, 160, 23, 0.55);
+  color: #ffb945;
+}
+.pill--signal {
+  background: rgba(93, 212, 212, 0.10);
+  border-color: rgba(93, 212, 212, 0.45);
+  color: #5dd4d4;
+}
+.pill--crimson {
+  background: rgba(164, 36, 59, 0.18);
+  border-color: rgba(164, 36, 59, 0.55);
+  color: #ff9aab;
+}
+
+/* Gallifreyan Seal corner ornaments for the dedication card */
+.seal-frame { position: relative; border: 1px solid rgba(212, 160, 23, 0.35); }
+.seal-frame .corner-tl, .seal-frame .corner-br {
+  position: absolute; width: 36px; height: 36px;
+  border: 2px solid #d4a017; opacity: 0.85;
+}
+.seal-frame .corner-tl { top: -2px; left: -2px; border-right: 0; border-bottom: 0; }
+.seal-frame .corner-br { bottom: -2px; right: -2px; border-left: 0; border-top: 0; }
+
+/* Roundel — TARDIS interior wall ornament for hero panels */
+.roundel-grid {
+  background-image:
+    radial-gradient(circle at center, rgba(58,109,176,0.18) 0 14px, transparent 15px),
+    radial-gradient(circle at center, rgba(212,160,23,0.10) 0 6px, transparent 7px);
+  background-size: 64px 64px, 64px 64px;
+  background-position: 0 0, 0 0;
+}
