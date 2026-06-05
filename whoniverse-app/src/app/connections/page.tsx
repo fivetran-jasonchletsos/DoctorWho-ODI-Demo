@@ -87,7 +87,7 @@ export default function ConnectionsPage() {
         </ol>
 
         <p className="mt-12 text-sm text-bone/60 italic max-w-prose">
-          In the real pipeline, Cortex Analyst sits on top of gold.fct_appearance,
+          In the real pipeline, dbt-wizard run-time agents read gold.fct_appearance,
           gold.dim_doctor and gold.dim_monster. A question like {`"`}which monsters appear
           across more than one Doctor era{`?"`} resolves with two joins. There are
           ~{episodes.length} episodes, ~{companions.length} companions and

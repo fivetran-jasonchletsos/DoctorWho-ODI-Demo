@@ -12,8 +12,8 @@ export default function ArchitecturePage() {
         <h1 className="serif text-4xl sm:text-5xl text-paper vortex-stop">One Lake. Many Engines.</h1>
         <p className="serif italic text-bone/70 mt-3 max-w-2xl">
           Three public sources flow through Fivetran into one open Iceberg lake on S3.
-          That same lake is mirrored into Snowflake managed tables. dbt models it bronze→silver→gold.
-          Cortex Analyst answers natural-language questions on top. No lock-in. No vendor TARDIS.
+          That same lake is mirrored into Snowflake managed tables. dbt and dbt-wizard model it bronze→silver→gold.
+          Run-time agents answer natural-language questions on top, reading the same gold layer humans do. No lock-in. No vendor TARDIS.
         </p>
 
         <pre className="mt-10 overflow-x-auto bg-vortex border border-gallifrey/25 p-5 text-xs leading-relaxed text-bone/85 font-mono">{`        Wikidata        TARDIS Wiki        TMDB
@@ -24,15 +24,15 @@ export default function ArchitecturePage() {
                             |
                   Snowflake (managed tables)
                             |
-                           dbt
+                    dbt + dbt-wizard
                             |
         bronze.* ─→ silver.* ─→ gold.dim_doctor, gold.dim_companion,
                                 gold.dim_monster, gold.dim_episode,
                                 gold.fct_appearance, gold.fct_regeneration
                             |
           ┌─────────┬───────┴────────┬─────────────┐
-         BI      Cortex          TARDIS         Notebooks
-                 Analyst        front end`}</pre>
+         BI     Run-time          TARDIS         Notebooks
+                 agents          front end`}</pre>
 
         <section className="mt-12">
           <h2 className="type text-[11px] uppercase tracking-[0.35em] text-bone/65 mb-4">Why ODI for this dataset?</h2>
@@ -46,7 +46,7 @@ export default function ArchitecturePage() {
         </section>
 
         <section className="mt-10">
-          <h2 className="type text-[11px] uppercase tracking-[0.35em] text-bone/65 mb-4">Cortex sample questions</h2>
+          <h2 className="type text-[11px] uppercase tracking-[0.35em] text-bone/65 mb-4">Run-time agent sample questions</h2>
           <ul className="space-y-1.5 text-bone/85">
             <li>&middot; Which monsters appear across both classic (≤ 1989) and modern (≥ 2005) episodes?</li>
             <li>&middot; Which companion travelled with the most Doctors?</li>
@@ -57,7 +57,8 @@ export default function ArchitecturePage() {
           </ul>
           <p className="text-sm text-bone/65 italic mt-4">
             Each of these resolves with at most three joins on the gold layer. The live
-            /submit page mocks the endpoint; the real one runs on Snowflake Cortex.
+            /submit page mocks the endpoint; the real one runs on the dbt-wizard run-time, whose four
+            sub-agents (Explorer, Summary, Worker, Verification) read the same gold layer humans do.
           </p>
         </section>
 
@@ -78,7 +79,7 @@ export default function ArchitecturePage() {
             </div>
             <div className="border border-tardisLt/30 bg-panel/40 p-4">
               <p className="type text-[10px] uppercase tracking-[0.3em] text-gallifrey/80">Activation</p>
-              <p className="text-sm text-bone/85 mt-2">Snowflake Cortex Analyst over the gold layer. Next.js static export to GitHub Pages.</p>
+              <p className="text-sm text-bone/85 mt-2">dbt-wizard run-time agents over the gold layer. Next.js static export to GitHub Pages.</p>
             </div>
           </div>
         </section>

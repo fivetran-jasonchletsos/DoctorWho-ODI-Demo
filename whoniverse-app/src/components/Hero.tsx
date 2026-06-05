@@ -21,7 +21,7 @@ export default function Hero() {
           {" "}{monsters.length} recurring foes. {episodes.length} curated stories
           across {Math.max(...doctors.map((d) => d.yearEnd)) - Math.min(...doctors.map((d) => d.yearStart)) + 1} years.
           {" "}All pulled from Wikidata, TARDIS Wiki, and TMDB by Fivetran;
-          modelled by dbt into a Snowflake gold layer; queryable by Cortex Analyst.
+          modelled by dbt and dbt-wizard into a Snowflake gold layer; read by humans and run-time agents alike.
         </p>
         <div className="reveal reveal-4 mt-9 flex flex-wrap gap-3">
           <Link href="/doctors"      className="px-5 py-2.5 type uppercase tracking-[0.2em] text-xs bg-tardis text-paper hover:bg-tardisLt transition border border-gallifrey/40">The Doctors</Link>

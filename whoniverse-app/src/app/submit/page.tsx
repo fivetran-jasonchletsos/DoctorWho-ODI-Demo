@@ -5,9 +5,9 @@ import { useState } from "react";
 const REJECTIONS = [
   "Submission rejected: Captain Jack's flirt-count is canonically infinite. Bound query would never terminate.",
   "Submission rejected: cannot resolve which Master regeneration this refers to. (There are eleven on file.)",
-  "Submission rejected: the answer involves a time paradox. Cortex declines to compute paradoxes.",
+  "Submission rejected: the answer involves a time paradox. The run-time agent declines to compute paradoxes.",
   "Submission rejected: \"Was Susan really his granddaughter?\" exceeds the 2-billion-row Wikidata budget.",
-  "Submission rejected: response would require us to take a position on whether the TV Movie is canon. Cortex prefers ambiguity.",
+  "Submission rejected: response would require us to take a position on whether the TV Movie is canon. The run-time agent prefers ambiguity.",
   "Submission rejected: spoilers detected for episodes airing after the model's knowledge cutoff. Try River Song.",
   "Submission rejected: \"How does the chameleon arch work\" — the script said \"magic\" and our embedding doesn't normalise that.",
   "Submission rejected: The Doctor's real name is filtered out of all training data per the Demons Run accord.",
@@ -37,11 +37,11 @@ export default function SubmitPage() {
     <main className="px-5 py-12 sm:px-6 sm:py-16 md:px-16 md:py-20">
       <div className="mx-auto max-w-3xl">
         <p className="type text-[11px] uppercase tracking-[0.4em] text-gallifrey mb-3">Submit a Question</p>
-        <h1 className="serif text-4xl sm:text-5xl text-paper vortex-stop">Ask Cortex</h1>
+        <h1 className="serif text-4xl sm:text-5xl text-paper vortex-stop">Ask the Run-time Agents</h1>
         <p className="serif italic text-bone/70 mt-3 max-w-2xl">
-          The architecture page describes a Cortex Analyst sitting on top of the gold
-          layer. In this static build that endpoint is mocked &mdash; submit anything
-          and Cortex will reject it, lovingly, for canon-protection reasons.
+          The architecture page describes dbt-wizard run-time agents reading the same gold
+          layer humans do. In this static build that endpoint is mocked &mdash; submit anything
+          and the agent will reject it, lovingly, for canon-protection reasons.
         </p>
 
         <form onSubmit={submit} className="mt-10">
@@ -54,13 +54,13 @@ export default function SubmitPage() {
             className="mt-2 w-full bg-vortex border border-gallifrey/30 text-paper px-4 py-3 focus:outline-none focus:border-gallifrey/70 placeholder:text-bone/30 serif"
           />
           <button type="submit" className="mt-4 px-5 py-2.5 type uppercase tracking-[0.2em] text-xs bg-tardis text-paper hover:bg-tardisLt border border-gallifrey/40">
-            Submit to Cortex
+            Submit to the agent
           </button>
         </form>
 
         {response && (
           <div className="mt-8 border border-crimson/45 bg-panel/40 p-5 reveal">
-            <p className="type text-[10px] uppercase tracking-[0.3em] text-crimson mb-2">Cortex Reply</p>
+            <p className="type text-[10px] uppercase tracking-[0.3em] text-crimson mb-2">Run-time agent response</p>
             <p className="serif text-lg text-paper leading-snug">{response}</p>
           </div>
         )}

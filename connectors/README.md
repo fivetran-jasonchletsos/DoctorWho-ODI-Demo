@@ -1,8 +1,8 @@
 # Fivetran connectors — TARDIS Index File (4 sources)
 
 Four managed Fivetran connectors feed the Whoniverse. All four land
-into the same Iceberg lake in S3, mirrored into Snowflake. dbt + Cortex
-sit on top of the gold layer.
+into the same Iceberg lake in S3, mirrored into Snowflake. dbt, dbt-wizard,
+and run-time agents sit on top of the gold layer.
 
 ## The connectors
 

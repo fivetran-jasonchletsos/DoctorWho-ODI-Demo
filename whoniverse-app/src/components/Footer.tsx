@@ -32,7 +32,7 @@ export default function Footer() {
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div className="space-y-1">
             <p className="type text-[9px] uppercase tracking-[0.3em] text-bone/45">
-              Fivetran → Iceberg/S3 → Snowflake → dbt → Cortex Analyst
+              Fivetran → Iceberg/S3 → Snowflake → dbt + dbt-wizard → run-time agents
             </p>
             <p className="type text-[9px] uppercase tracking-[0.3em] text-bone/40">
               Set in Cinzel, Orbitron, JetBrains Mono &middot; Bigger on the inside

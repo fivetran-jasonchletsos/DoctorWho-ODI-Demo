@@ -1,4 +1,4 @@
-// Whoniverse "Ask Cortex" Cloudflare Worker.
+// Whoniverse "Ask the Archivist" Cloudflare Worker.
 //
 // POST  { question: string, history?: {role, content}[] }
 // →     streamed text response from Claude Haiku 4.5, grounded in

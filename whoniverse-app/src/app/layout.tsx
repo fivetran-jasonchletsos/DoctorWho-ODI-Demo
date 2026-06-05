@@ -32,7 +32,7 @@ const crimson = Crimson_Pro({
 export const metadata: Metadata = {
   title: "TARDIS Index File — The Whoniverse Archive",
   description:
-    "Every Doctor. Every companion. Every monster. Every story. A Whoniverse archive built on Fivetran + Snowflake + dbt + Iceberg + Cortex Analyst.",
+    "Every Doctor. Every companion. Every monster. Every story. A Whoniverse archive built on Fivetran + Iceberg + Snowflake + dbt + dbt-wizard run-time agents.",
 };
 
 export const viewport: Viewport = {

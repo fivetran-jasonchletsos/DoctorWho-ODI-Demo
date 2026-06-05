@@ -2,9 +2,9 @@
 
 End-to-end ODI demonstration built around the Whoniverse. Every Doctor,
 every companion, every recurring monster, every load-bearing story —
-all pulled from open APIs by Fivetran, modeled by dbt into a Snowflake
-gold layer, and surfaced through a TARDIS-themed Next.js front end.
-Snowflake **Cortex Analyst** sits on top of the gold tables and answers
+all pulled from open APIs by Fivetran, modeled by dbt and dbt-wizard into a
+Snowflake gold layer, and surfaced through a TARDIS-themed Next.js front end.
+**dbt-wizard run-time agents** read the same gold tables humans do and answer
 natural-language questions about the canon.
 
 Built for Sarah (sister-in-law) and Peter (father). Dedication lives in
@@ -26,8 +26,8 @@ same lineage diagram the industry demos use.
 
 - **Ingest**: Fivetran managed connectors (3 sources, all hands-off after setup)
 - **Storage**: Apache Iceberg in S3 (open foundation) → mirrored into Snowflake managed tables
-- **Transform**: dbt Core targeting Snowflake; bronze → silver → gold + a small Semantic Layer
-- **Activation**: Snowflake Cortex Analyst on `gold.*` tables for NL Q&A
+- **Transform**: dbt Core plus dbt-wizard targeting Snowflake; bronze → silver → gold + a small Semantic Layer
+- **Activation**: dbt-wizard run-time agents on `gold.*` tables for NL Q&A; humans and agents read the same gold layer
 - **Surface**: Next.js 14 static export → GitHub Pages
 
 ```
@@ -37,14 +37,14 @@ same lineage diagram the industry demos use.
                        |
         S3 + Iceberg  ⇄  Snowflake (managed tables)
                        |
-                      dbt
+                dbt + dbt-wizard
                        |
        gold.dim_doctor · gold.dim_companion · gold.dim_monster
        gold.dim_episode · gold.fct_appearance · gold.fct_regeneration
                        |
         ┌──────────────┼───────────────┬──────────────┐
-       BI         Cortex            TARDIS         Notebooks
-                  Analyst         front end
+       BI       Run-time           TARDIS         Notebooks
+                 agents          front end
 ```
 
 ## Layout
@@ -67,17 +67,19 @@ same lineage diagram the industry demos use.
 - `/connections` — Cross-canon links (Captain Jack → Face of Boe, Sutekh on the TARDIS roof, etc.)
 - `/related` — Weighted-Jaccard similarity engine across all stories
 - `/timeline` — Year-by-year, classic through Gatwa, including the Wilderness Years
-- `/submit` — Cortex Analyst mock endpoint
+- `/submit` — dbt-wizard run-time agent mock endpoint
 - `/architecture` — ODI thesis with the lineage diagram
 - `/pipeline` — Connector health + layer status
 
-## Why Cortex sits on this data
+## Why run-time agents sit on this data
 
 The gold layer is small (~20 Doctors, ~40 companions, ~30 monsters,
 ~80 stories in this demo) but the joins are rich: a question like
 "which monsters appear across both classic and modern Who?" exercises
-three joins. Cortex Analyst can answer it in one shot. The /submit
-page and the /architecture Cortex panel show example questions.
+three joins. A dbt-wizard run-time agent can answer it in one shot. The
+run-time has four sub-agents (Explorer, Summary, Worker, Verification),
+and humans and agents read the same gold layer. The /submit page and the
+/architecture run-time agent panel show example questions.
 
 ## Local dev
 

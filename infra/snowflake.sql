@@ -1,7 +1,7 @@
 -- TARDIS Index File — Snowflake DDL
 --
 -- Run as ACCOUNTADMIN once. After this, Fivetran lands into bronze_*,
--- dbt builds silver + gold, Cortex Analyst sits on gold.
+-- dbt and dbt-wizard build silver + gold, run-time agents sit on gold.
 
 create warehouse if not exists whoniverse_wh
     warehouse_size = 'x-small'
@@ -53,10 +53,10 @@ grant create table, create view, create dynamic table on schema whoniverse.gold 
 grant modify on schema whoniverse.silver to role dbt_runner;
 grant modify on schema whoniverse.gold   to role dbt_runner;
 
--- Cortex Analyst role (read-only on gold)
-create role if not exists cortex_reader;
-grant usage on warehouse whoniverse_wh to role cortex_reader;
-grant usage on database whoniverse to role cortex_reader;
-grant usage on schema whoniverse.gold to role cortex_reader;
-grant select on all tables in schema whoniverse.gold to role cortex_reader;
-grant select on future tables in schema whoniverse.gold to role cortex_reader;
+-- Run-time agent role (read-only on gold)
+create role if not exists agent_reader;
+grant usage on warehouse whoniverse_wh to role agent_reader;
+grant usage on database whoniverse to role agent_reader;
+grant usage on schema whoniverse.gold to role agent_reader;
+grant select on all tables in schema whoniverse.gold to role agent_reader;
+grant select on future tables in schema whoniverse.gold to role agent_reader;

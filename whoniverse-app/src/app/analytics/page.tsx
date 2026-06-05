@@ -89,7 +89,7 @@ export default function AnalyticsPage() {
         <p className="type text-[11px] uppercase tracking-[0.4em] text-gallifrey mb-3">Analytics</p>
         <h1 className="serif text-4xl sm:text-5xl text-paper vortex-stop">Whoniverse, by the numbers</h1>
         <p className="serif italic text-bone/70 mt-3 max-w-2xl">
-          {totalYears} years of one show, indexed and counted. Powered by the same gold-layer joins Cortex sees.
+          {totalYears} years of one show, indexed and counted. Powered by the same gold-layer joins the run-time agents read.
         </p>
 
         {/* Headline KPI strip */}
